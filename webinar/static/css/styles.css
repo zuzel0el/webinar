@@ -1,0 +1,221 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column; /* Allow footer to align properly */
+    min-height: 100vh;
+    background-color: #f8f9fa; /* Light Gray */
+    color: #2c3e50; /* Dark Blue */
+}
+
+/* Navbar styling */
+.navbar {
+    height: 100vh;
+    width: 250px;
+    background-color: #9B69B6; /* Purple */
+    color: white;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed; /* Navbar stays fixed */
+    top: 0;
+    left: 0;
+}
+
+.navbar.closed {
+    width: 60px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+.navbar li {
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    color: #87CEEB; /* Sky Blue */
+}
+
+/* Navbar collapsed styling */
+.navbar.closed a {
+    text-align: center;
+    opacity: 0; /* Hide text in collapsed state */
+    transition: opacity 0.3s ease;
+}
+
+.navbar.closed a:hover {
+    opacity: 1; /* Reveal text on hover */
+}
+
+.navbar.closed li {
+    justify-content: center;
+}
+
+/* Toggle button styling */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 250px;
+    background-color: #9B69B6; /* Purple */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar.closed + .toggle-btn {
+    left: 60px;
+}
+
+.toggle-btn:hover {
+    background-color: #34495e; /* Darker Blue */
+}
+
+/* Content styling */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    color: #2c3e50; /* Dark Blue Text */
+    overflow-y: auto;
+    display: flex; /* Flex düzen */
+    flex-direction: column; /* Dikey düzen */ 
+    margin-left: 250px; /* Navbar genişliği kadar boşluk ekle */
+    transition: margin-left 0.3s ease; /* Geçiş animasyonu */
+}
+.nl 
+{
+    display: flex;
+    margin-bottom: 2vh;
+   
+}
+.nl  p {
+    width:65%;
+    margin-right: 5%;
+    height: 20vh;
+    
+}
+.nl  img {
+    width:28%;
+    height: 20vh;
+    
+}
+
+.navbar.closed ~ .content {
+    margin-left: 60px; /* Navbar daraltıldığında boşluğu azalt */
+}
+
+.content h1 {
+    text-align: center;
+    color: #9B69B6; /* Purple */
+    margin-bottom: 20px;
+}
+
+/* Paragraph background styling */
+.content p {
+    background-color: #FFFFFF; /* White background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2c3e50; /* Dark Blue Text */
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+/* Pink button styling */
+.btn-cont
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pink-button {
+    background-color: pink; /* Pembe arka plan */
+    height: 50px;
+    width: 30%x;
+    color: white; /* Beyaz yazı */
+    border: none;
+    padding: 10px 20px; /* İç boşluklar */
+    font-size: 16px;
+    border-radius: 5px; /* Yuvarlak köşeler */
+    cursor: pointer; /* Tıklanabilir imleç */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Animasyon */
+    align-self: center; /* Ortaya hizala */
+    margin-top: auto; /* Alt kenara it */
+    margin-bottom: 20px; /* Alt boşluk ekle */
+}
+
+.pink-button:hover {
+    background-color: #ff99cc; /* Daha koyu pembe */
+    transform: scale(1.05); /* Hafif büyüme */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #4B4B4B; /* Purple background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute; /* Footer moves with content */
+    bottom: 0;
+    left: 250px; /* Navbar genişliği kadar sola boşluk bırak */
+    width: calc(100% - 250px); /* Genişliği navbar'a göre ayarla */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 14px;
+    transition: left 0.3s ease, width 0.3s ease; /* Geçiş animasyonu */
+}
+
+.navbar.closed ~ .footer {
+    left: 60px; /* Navbar daraltıldığında sola boşluğu azalt */
+    width: calc(100% - 60px); /* Genişliği daralt */
+}
+
+/* Footer links styling */
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #FFD700; /* Gold */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF; /* White on hover */
+}
+
+.navbar.closed {
+    width: 60px; /* Collapsed width */
+}

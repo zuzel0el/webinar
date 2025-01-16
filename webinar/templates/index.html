@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'images/download.png' %}" type="image/png">
+    <title>Site with Left Navbar</title>
+</head>
+<body>
+    <div class="navbar closed" id="navbar">
+        <ul>
+            <li><a href="http://127.0.0.1:8000/">Home</a></li>
+            <li><a href="http://127.0.0.1:8000/ustawy">Ustawy</a></li>
+            <li><a href="http://127.0.0.1:8000/definicje">Definicje</a></li>
+            <li><a href="http://127.0.0.1:8000/postepowanie">Postępowanie</a></li> 
+        </ul>
+    </div>
+    <button class="toggle-btn" id="toggle-btn">☰</button>
+    <div class="content">
+        <h1>Projekt edukacyjny</h1>
+        <p>
+            PARĘ SŁÓW O NAS<br><br>
+            Explore our services and portfolio. Use the navbar to navigate through different sections.bdasdasdasdasdasddddsadasdasdasdad Explore our services and portfolio. 
+            Use the navbar to navigate through different sections.bdasdasdasdasdasddddsadasdasdasdad
+        </p>
+        <p>
+            PARĘ SŁÓW O NAS<br><br>
+            Explore our services and portfolio. Use the navbar to navigate through different sections.bdasdasdasdasdasddddsadasdasdasdad Explore our services and portfolio. 
+            Use the navbar to navigate through different sections.bdasdasdasdasdasddddsadasdasdasdad
+        </p>
+        <p>
+            PARĘ SŁÓW O NAS<br><br>
+            Explore our services and portfolio. Use the navbar to navigate through different sections.bdasdasdasdasdasddddsadasdasdasdad Explore our services and portfolio. 
+            Use the navbar to navigate through different sections.bdasdasdasdasdasddddsadasdasdasdad<br><br>
+            <di class="btn-cont">
+            <button class="pink-button">
+                Check Test
+            </button>
+           </div>
+        </p>
+    </div>
+    <footer class="footer">
+        <p>© 2025 Your Website. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/privacy-policy">Privacy Policy</a> | 
+            <a href="/terms-of-service">Terms of Service</a> | 
+            <a href="/contact">Contact Us</a>
+        </div>
+    </footer>
+    
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const toggleBtn = document.getElementById('toggle-btn');
+
+        toggleBtn.addEventListener('click', () => {
+            navbar.classList.toggle('closed');
+        });
+    </script>
+</body>
+</html>
